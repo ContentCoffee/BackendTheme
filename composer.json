@@ -1,5 +1,5 @@
 {
-  "name": "contentcoffee/singles",
+  "name": "contentcoffee/backendtheme",
   "description": "D8+ admin theme.",
   "require": {
     "php": "^5.6 || ^7.0"
