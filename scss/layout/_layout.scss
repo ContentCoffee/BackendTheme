@@ -1,0 +1,34 @@
+.layout-page {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 20px;
+    padding-bottom: 45px;
+    min-height: 95vh;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+    border-radius: 5px;
+}
+
+.layout-container {
+    margin: 0 auto !important;
+    padding: 0 30px;
+}
+
+.page-content {
+    padding: 20px;
+    margin-bottom: 0;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+    &--full {
+        padding: 0;
+    }
+
+    .path-node & {
+        max-width: 960px;
+
+        &--full {
+            max-width: none;
+        }
+    }
+}

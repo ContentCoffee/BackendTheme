@@ -1,0 +1,20 @@
+uuid: 7c512c5a-d5e7-49f9-8366-231b736f5adb
+langcode: nl
+status: true
+dependencies:
+  theme:
+    - backendtheme
+_core:
+  default_config_hash: '-n6SLwkagV2f2kWkKjdob7Dst70SjtQQ5t9kM0b_mes'
+id: backendtheme_page_title
+theme: backendtheme
+region: header
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

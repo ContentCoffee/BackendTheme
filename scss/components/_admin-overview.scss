@@ -1,0 +1,75 @@
+.admin-overview {
+    fieldset[data-drupal-selector="edit-field-publish-status-value"] {
+        display: block;
+        width: 100%;
+        max-width: none;
+
+        flex: none;
+
+        .fieldgroup {
+            display: flex;
+        }
+
+        .form-item {
+            float: none;
+            flex: none;
+        }
+    }
+
+    .form-item-field-publish-status-value-draft > label::after {
+        @include ionicons;
+
+        content: $ionicon-var-edit;
+        margin: 0 5px;
+    }
+    .form-item-field-publish-status-value-scheduled > label::after {
+        @include ionicons;
+        color: #ffaa46;
+        content: $ionicon-var-calendar;
+        margin: 0 5px;
+    }
+    .form-item-field-publish-status-value-published > label::after {
+        @include ionicons;
+        color: #27AE60;
+        content: $ionicon-var-checkmark;
+        margin: 0 5px;
+    }
+
+    .views-table {
+        .views-field-field-publish-status {
+            width: 15px;
+        }
+
+        .views-field-status {
+            width: 15px;
+        }
+    }
+
+    td {
+        vertical-align: top;
+
+        &:nth-child(2) {
+            width: 350px;
+        }
+
+        &:nth-child(3) {
+            width: 115px;
+        }
+
+        &:nth-child(4) {
+            width: 300px;
+        }
+
+        &:nth-child(5) {
+            width: 150px;
+        }
+
+        &:nth-child(6) {
+            width: 125px;
+        }
+
+        &:nth-child(7) {
+            width: 100px;
+        }
+    }
+}

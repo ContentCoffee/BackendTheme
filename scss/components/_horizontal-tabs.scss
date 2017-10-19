@@ -1,0 +1,75 @@
+.horizontal-tabs {
+    margin: 0 0 15px;
+    padding: 0;
+    border: 0;
+    position: relative;
+
+    .horizontal-tabs-list {
+        display: inline-block;
+        margin: 0 0 20px 0;
+        border: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #F2F1F6;
+        width: 100%;
+        height: auto;
+        clear: both;
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
+    }
+
+    .horizontal-tab-button {
+        display: block;
+        position: relative;
+        margin-bottom: -1px;
+        float: left;
+        font-weight: 100;
+        font-size: 14px;
+        border-right: 1px solid rgba(0, 0, 0, .08);
+
+        &:not(.selected) {
+            > a {
+                opacity: .8;
+            }
+        }
+
+        &.selected {
+            border-bottom: 1px solid white;
+            background-color: #ffffff;
+        }
+
+        > a {
+            display: block;
+            padding: 10px 20px;
+            color: $tabs-tab-text-color;
+            transition: all .2s ease-in-out;
+
+            strong {
+                font-weight: 500;
+            }
+
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .horizontal-tabs-pane {
+        padding: 0 30px;
+        margin: 0;
+        border: 0;
+
+        &.horizontal-tab-hidden {
+            display: none;
+        }
+
+        summary {
+            display: none;
+        }
+
+        .details-wrapper {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

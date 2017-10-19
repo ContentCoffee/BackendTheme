@@ -1,0 +1,72 @@
+# Global styles
+
+global-styling:
+  version: '1.0.0'
+  css:
+    theme:
+      css/backendtheme.css: {}
+  dependencies:
+    - backendtheme/overpass-font
+    - backendtheme/ionicons
+
+adminimal-styling:
+  version: '1.0.0'
+  css:
+    theme:
+      css/adminimal.css: {}
+
+# Fonts
+
+overpass-font:
+  version: '1.0.0'
+  css:
+    base:
+      https://fonts.googleapis.com/css?family=Overpass:300,400,600,700: { external: true }
+
+ionicons:
+  version: '2.0.1'
+  css:
+    base:
+      https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css: { external: true }
+
+# Components
+
+dropdown:
+  version: '1.0.0'
+  js:
+    js/dropdown.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+select2.behaviors:
+  js:
+    js/select2.behaviors.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - backendtheme/select2
+
+maxlength.behaviors:
+  js:
+    js/maxlength.behaviors.js: {}
+  dependencies:
+    - core/jquery
+
+# External libraries
+
+select2:
+  remote: https://github.com/select2/select2
+  version: "4.0.3"
+  license:
+    name: MIT
+    url: https://github.com/select2/select2/blob/master/LICENSE.md
+  js:
+    vendor/select2/dist/js/select2.js: {}
+    vendor/select2/dist/js/i18n/nl.js: {}
+  css:
+    base:
+      vendor/select2/dist/css/select2.css: {}
+  dependencies:
+    - core/jquery

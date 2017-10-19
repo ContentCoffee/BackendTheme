@@ -1,0 +1,86 @@
+.button {
+    display: inline-block;
+    padding: 9px 10px;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-bottom: 2px solid lighten(map-get($button-variants, 'primary'), 10%);
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    background: map-get($button-variants, 'primary');
+    color: color-contrast(map-get($button-variants, 'primary'));
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        outline: 0;
+        background: lighten(map-get($button-variants, 'primary'), 10%);
+    }
+
+    .caret {
+        margin-left: 0;
+    }
+
+    &.dropdown-toggle {
+        border-left: 1px solid rgba(#FFFFFF, .15);
+    }
+
+    &.form-submit {
+        background-color: #CCCCCC;
+        border-bottom-color: darken(#CCCCCC, 10%);
+        color: #333333;
+
+        &:hover,
+        &:focus {
+            background: darken(#CCCCCC, 10%);
+        }
+    }
+}
+
+.button--xs {
+    font-size: 13px;
+    padding: 7px 10px;
+}
+
+.button--small {
+    font-size: 14px;
+}
+
+.button--table {
+    font-size: 12px;
+    padding: 4px 10px;
+
+    border-bottom-color: #363d44;
+}
+
+@each $name, $color in $button-variants {
+    .button--#{$name} {
+        background-color: $color !important;
+        color: color-contrast($color) !important;
+        border-bottom-color: darken($color, 10%) !important;
+
+        &:focus,
+        &:hover {
+            background: darken($color, 10%) !important;
+        }
+    }
+}
+
+// Compact link, used in the Drupal admin templates.
+.compact-link > a {
+    @extend .button;
+    @extend .button--primary;
+}
+
+// Operation links
+.operations > li > a {
+    @extend .button;
+    @extend .button--primary;
+    @extend .button--xs;
+}

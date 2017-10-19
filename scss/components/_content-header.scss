@@ -1,0 +1,24 @@
+.content-header {
+    background-color: $content-header-bg;
+    color: $content-header-color;
+    margin: 0;
+    padding: 10px 0 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: 1px solid $table-border-color;
+}
+
+.page-title {
+    display: block;
+    margin: 0;
+    padding: 0 0 10px;
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #da5a47;
+
+    em {
+        font-style: normal;
+    }
+    // border-bottom: 1px solid rgba($content-header-color, .2);
+}

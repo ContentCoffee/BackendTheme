@@ -1,0 +1,22 @@
+uuid: a3ed95a0-9357-4a15-b945-d7e944f7924d
+langcode: nl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - backendtheme
+_core:
+  default_config_hash: s3j4I0KIy9K_Wogu7q8WYDhegTxrqMdqeHhUQAToU8Y
+id: backendtheme_messages
+theme: backendtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

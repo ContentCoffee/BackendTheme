@@ -1,0 +1,128 @@
+/**
+ * @file
+ * Override of misc/vertical-tabs.css.
+ */
+.vertical-tabs {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.vertical-tabs__menu {
+    float: left; /* LTR */
+    width: $vertical-tabs-size;
+    margin: 0 -100% -1px 0; /* LTR */
+    padding: 0;
+    line-height: 1;
+    border-right: 0;
+    box-shadow: $default-box-shadow;
+}
+
+.vertical-tabs__menu-item {
+    position: relative;
+    display: block;
+    background-color: $vertical-tabs-bg;
+    font-weight: 100;
+    transition: all .2s ease-out;
+    border-bottom: 4px solid transparent;
+}
+
+.vertical-tabs__menu-item-title {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.vertical-tabs__menu-item.is-selected {
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: $vertical-tabs-active-bg;
+    border-bottom-color: $tabs-tab-active-border-color;
+
+}
+
+.vertical-tabs__menu-item:focus,
+.vertical-tabs__menu-item:active {
+    z-index: 2;
+}
+
+.vertical-tabs__menu-item a {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    vertical-align: middle;
+    color: rgba($vertical-tabs-color, .95);
+    padding: 15px;
+    text-decoration: none;
+    transition: color .2s ease-in;
+}
+
+.vertical-tabs__menu-item a:hover,
+.vertical-tabs__menu-item a:focus {
+    color: $vertical-tabs-color;
+}
+
+.vertical-tabs__menu-item a:focus {
+    outline: none;
+}
+
+.vertical-tabs__menu-item a:focus .vertical-tabs__menu-item-title {
+    text-decoration: underline;
+}
+
+.vertical-tabs__menu-item a:active .vertical-tabs__menu-item-title,
+.vertical-tabs__menu-item.is-selected a:focus .vertical-tabs__menu-item-title {
+    text-decoration: none;
+}
+
+.vertical-tabs__menu-item.is-selected a {
+    color: $vertical-tabs-active-color;
+    border-bottom: none;
+    text-decoration: none;
+}
+
+.vertical-tabs__menu-item.is-selected a:hover,
+.vertical-tabs__menu-item.is-selected a:focus {
+    color: $vertical-tabs-active-color;
+}
+
+.vertical-tabs__panes {
+    margin: 0 0 0 $vertical-tabs-size;
+    padding: 0 15px 0 30px;
+    background: #fff;
+
+    .details-wrapper {
+        box-sizing: border-box;
+        padding: 0;
+    }
+}
+
+.vertical-tabs__panes:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.vertical-tabs__pane {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.vertical-tabs__menu-item-summary {
+    display: block;
+    padding-top: 0.4em;
+}
+
+.vertical-tabs__pane > summary {
+    display: none;
+}
+
+.layout-node-form {
+    .vertical-tabs {
+        padding-bottom: 5px;
+    }
+
+    .vertical-tabs__menu {
+
+    }
+}

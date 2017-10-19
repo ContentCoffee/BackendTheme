@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box !important;
+}
+
+body {
+    font-family: $base-font-family;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    background-color: $body-bg-color;
+}
+
+a {
+    color: currentColor;
+}
+
+details summary {
+    font-weight: 400;
+    
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}

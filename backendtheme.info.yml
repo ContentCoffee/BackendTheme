@@ -1,0 +1,68 @@
+name: backendtheme
+type: theme
+description: 'An admin experience.'
+version: VERSION
+core: 8.x
+base theme: seven
+
+# Regions from adminimal theme, since regions are not inherited from the base theme.
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+
+libraries:
+  - backendtheme/adminimal-styling
+  - backendtheme/global-styling
+  - backendtheme/dropdown
+  - backendtheme/select2.behaviors
+
+stylesheets-remove:
+  - '@stable/css/node/node.module.css'
+  - '@stable/css/filter/filter.admin.css'
+
+libraries-override:
+  classy/base:
+    css:
+      component:
+        css/components/button.css: false
+        css/components/tabs.css: false
+
+  classy/dropbutton:
+    css:
+      component:
+        css/components/dropbutton.css: false
+
+  seven/global-styling:
+    css:
+      component:
+        css/components/admin-list.css: false
+        css/components/buttons.css: false
+        css/components/dropbutton.component.css: false
+        css/components/form.css: false
+        css/components/tabs.css: false
+        css/components/panel.css: false
+        css/components/pager.css: false
+
+  seven/vertical-tabs:
+    css:
+      component:
+        css/components/vertical-tabs.css: false
+
+  field_group/element.horizontal_tabs:
+    css:
+      component:
+        formatters/tabs/horizontal-tabs.css: false
+
+  filter/drupal.filter.admin:
+    css:
+      theme:
+        css/filter.admin.css: false

@@ -1,0 +1,107 @@
+.icon {
+    white-space: nowrap;
+
+    &::before {
+        @include ionicons;
+        text-align: center;
+    }
+
+    /*
+        CONTENT TYPES
+     */
+
+    &--article::before {
+        content: $ionicon-var-document-text;
+    }
+    &--page::before {
+        content: $ionicon-var-document-text;
+    }
+    &--video::before {
+        content: $ionicon-var-ios-videocam;
+    }
+    &--video_long_form::before {
+        content: $ionicon-var-social-youtube;
+    }
+    &--video_short_form::before {
+        content: $ionicon-var-social-youtube-outline;
+    }
+    &--playlist::before {
+        content: $ionicon-var-ios-list;
+    }
+    &--program::before {
+        content: $ionicon-var-ios-lightbulb;
+    }
+    &--stub::before {
+        content: $ionicon-var-link;
+    }
+    &--combined_tags::before {
+        content: $ionicon-var-pricetags;
+    }
+    &--contest::before {
+        content: $ionicon-var-trophy;
+    }
+
+    /*
+        CONTENT BLOCKS
+     */
+
+    &--text:before {
+        content: $ionicon-var-document-text;
+    }
+    &--call_to_action:before {
+        content: $ionicon-var-alert-circled;
+    }
+    &--faq:before {
+        content: $ionicon-var-help;
+    }
+    &--html_embed:before {
+        content: $ionicon-var-code;
+    }
+    &--image:before {
+        content: $ionicon-var-camera;
+    }
+    &--single_program:before {
+        content: $ionicon-var-image;
+    }
+    &--multiple_programs:before {
+        content: $ionicon-var-images;
+    }
+    &--quote:before {
+        content: $ionicon-var-quote;
+    }
+    &--section:before {
+        content: $ionicon-var-qr-scanner;
+    }
+
+    /*
+        PUBLISHING STATES
+     */
+
+    &--scheduled::before {
+        color: #ffaa46;
+        content: $ionicon-var-calendar;
+    }
+    &--published::before {
+        color: #27AE60;
+        content: $ionicon-var-checkmark;
+    }
+    &--draft::before {
+        content: $ionicon-var-edit;
+    }
+
+    /*
+        SIZES
+     */
+
+    &--s::before {
+        width: 14px;
+        padding-right: 5px;
+    }
+    &--m::before {
+        padding-right: 10px;
+    }
+    &--l::before {
+        width: 28px;
+        margin-right: 10px;
+    }
+}

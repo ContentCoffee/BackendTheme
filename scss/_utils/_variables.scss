@@ -1,0 +1,80 @@
+// BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    s: 326px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+) !default;
+
+$native-font-stack:
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+        // Chrome for OS X (San Francisco)
+    BlinkMacSystemFont,
+        // Windows
+    "Segoe UI",
+        // Android
+    "Roboto",
+        // Basic web fallback
+    "Helvetica Neue", Arial, sans-serif !default;
+
+// The base font family
+$base-font-family: 'Overpass', $native-font-stack;
+// The alternative font family
+$alternative-font-family: 'Overpass', $native-font-stack;
+
+// The default colors used in text.
+$dark-text-default: #111111 !default;
+$light-text-default: #FFFFFF !default;
+
+// Default box-shadow
+$default-box-shadow: 0 1px 1px rgba(0, 0, 0, .15);
+$default-hover-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+// Body settings
+$body-bg-color: #EBEDEF;
+
+// Table settings
+$table-header-bg-color: transparent;
+$table-header-text-color: $dark-text-default;
+$table-border-color: darken(#F5F5F5, 5%);
+$table-hover-bg-color: #f9f9f9;
+
+// Input styles
+$input-border-color: rgba(0, 0, 0, .15);
+$input-border-focus-color: rgba(0, 0, 0, .35);
+$input-text-color: #333;
+$input-label-color: lighten($input-text-color, 10%);
+$input-description-color: #AEAEAE;
+$input-height: 36px;
+
+// Buttons
+$button-variants: (
+    'default': #578DCD,
+    'primary': #4C5661,
+    'danger': #CA5A41,
+);
+
+// Content header
+$content-header-bg: transparent;
+$content-header-color: $dark-text-default;
+
+// Tabs
+$tabs-tab-text-color: $dark-text-default;
+$tabs-tab-bg-color: transparent;
+$tabs-tab-border-color: transparent;
+
+$tabs-tab-active-bg-color: transparent;
+$tabs-tab-active-border-color: #da5a47;;
+
+$tabs-tab-hover-bg-color: transparent;
+$tabs-tab-hover-border-color: darken(#505660, 10%);
+
+// Vertical tabs
+$vertical-tabs-size: 240px;
+$vertical-tabs-bg: transparent;
+$vertical-tabs-color: #333;
+$vertical-tabs-active-bg: transparent;
+$vertical-tabs-active-color: #333;

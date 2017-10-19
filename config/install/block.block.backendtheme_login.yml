@@ -1,0 +1,22 @@
+uuid: 102e4164-1b5b-4875-9607-bda57bba0369
+langcode: nl
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - backendtheme
+_core:
+  default_config_hash: zf-A1_fyLxsRqMK7XhXWDL63uyyO_C7_Kg5MC3mFdOY
+id: backendtheme_login
+theme: backendtheme
+region: content
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

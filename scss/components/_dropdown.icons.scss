@@ -1,0 +1,48 @@
+$dropdown-icons: (
+    'add': $ionicon-var-android-add,
+    'rearrange': $ionicon-var-arrow-move,
+    'reorder': $ionicon-var-arrow-move,
+    'edit-details': $ionicon-var-edit,
+    'edit': $ionicon-var-edit,
+    'delete': $ionicon-var-trash-a,
+    'analyze': $ionicon-var-arrow-graph-up-left,
+    'duplicate': $ionicon-var-ios-copy,
+    'devel': '\f271',
+    'manage-fields': '\f27c',
+    'manage-form-display': '\f13d',
+    'manage-display': '\f4d6',
+    'storage-settings': $ionicon-var-soup-can,
+    'content-block': $ionicon-var-chatbubble,
+);
+
+.dropdown-menu {
+    li {
+        a {
+            position: relative;
+
+            &::before {
+                content: $ionicon-var-gear-a;
+                display: inline-block;
+                font-family: "Ionicons";
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                text-rendering: auto;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                margin-right: 10px;
+                background-image: none !important;
+                width: 15px;
+            }
+        }
+    }
+
+    @each $name, $icon in $dropdown-icons {
+        .#{$name} > a::before {
+            content: $icon;
+        }
+    }
+}

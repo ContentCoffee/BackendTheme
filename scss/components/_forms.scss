@@ -1,0 +1,274 @@
+input:read-only {
+    background: #f5f5f5 !important;
+    cursor: not-allowed;
+}
+
+%label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.subtitle > legend {
+    display: block;
+    width: 100%;
+
+    padding-bottom: 5px;
+
+    font-size: 24px;
+    line-height: 1;
+
+    border-bottom: 1px solid $body-bg-color;
+}
+
+.form-composite > legend,
+.label {
+    @extend %label;
+    color: $input-label-color;
+}
+
+.field-suffix {
+    color: $input-description-color;
+    margin-left: 3px;
+    margin-top: 5px;
+
+    .machine-name-value {
+        font-style: italic;
+    }
+}
+
+.counter,
+.description {
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.counter {
+    margin-top: 0;
+
+    position: absolute;
+    top: calc(1em - 4px);
+    right: 12px;
+
+    font-size: .85rem;
+}
+
+.maxlength-wrapper {
+    position: relative;
+
+    input.maxlength,
+    textarea.maxlength {
+        padding-right: 75px;
+    }
+}
+
+/**
+ * Form types.
+ */
+
+.field-group-tab fieldset,
+.field-group-fieldset {
+    border: 0;
+    padding: 0;
+
+    > legend {
+        @extend %label;
+        color: $input-label-color;
+        font-weight: 600;
+    }
+
+    .fieldset-wrapper {
+        margin-top: 10px;
+    }
+}
+
+.fieldset {
+    &-wrapper {
+        min-height: $input-height;
+    }
+}
+
+.field--type-won-id,
+.form-type-entity-autocomplete,
+.form-type-select-autocreate,
+.form-type-textfield,
+.form-type-number,
+.form-type-url,
+.form-type-select,
+.form-type-email,
+.form-type-managed-file,
+.form-type-textarea {
+    > label {
+        @extend %label;
+        color: $input-label-color;
+        font-weight: 600;
+    }
+}
+
+.form-type-radio,
+.form-type-checkbox {
+    .description {
+        margin-left: 3px;
+    }
+}
+
+.field--widget-imgix {
+    padding: 15px;
+    margin-bottom: 15px;
+
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+
+    .form-item:first-child {
+        margin-top: 0;
+    }
+}
+
+.form-autocomplete,
+.form-text,
+.form-tel,
+.form-email,
+.form-url,
+.form-search,
+.form-number,
+.form-color,
+.form-file,
+.form-date,
+.form-time,
+.form-textarea,
+.form-search {
+    -webkit-appearance: none;
+    padding: 6px 12px;
+    width: 100%;
+    max-width: 100%;
+
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+
+    font-size: 1em;
+    line-height: 1;
+
+    background: #fff;
+    color: rgba($input-text-color, .8);
+
+    transition: all .2s ease-in-out;
+    box-sizing: border-box !important;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:focus,
+    &:hover {
+        color: $input-text-color;
+        border-color: $input-border-focus-color;
+        background-color: #fff;
+    }
+
+    td & {
+        width: 100%;
+    }
+}
+
+.form-wrapper {
+    margin: 0 0 20px 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-item,
+.field--type-imgix,
+.field--name-field-slug,
+.field--name-field-video-length {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 700px;
+}
+
+.form-item.form-type-checkbox {
+    width: auto;
+    max-width: none;
+}
+
+.form-item {
+    margin: 0 0 20px 0;
+
+    td & {
+        margin: 0;
+    }
+
+    .counter,
+    .description {
+        color: $input-description-color;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-file {
+    border: 0;
+    padding: 10px 0;
+
+    &:focus,
+    &:hover {
+        box-shadow: none;
+    }
+}
+
+.form-actions {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    margin: 0 0 20px;
+
+    > * {
+        margin: 0 5px 0 0;
+    }
+}
+
+.form-disabled {
+    opacity: .65;
+}
+
+.form--inline {
+    margin-bottom: 20px;
+
+    .form-actions {
+        margin: 0;
+    }
+
+    .form-item {
+        flex: 1;
+
+        margin: 0;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}
+
+.form-select {
+    height: $input-height;
+}
+
+.field--name-field-publish-on,
+.field--name-field-unpublish-on {
+    width: auto;
+    float: left;
+}
+
+.field--name-field-publish-on {
+    margin-right: 30px;
+}
+
+.field--name-field-unpublish-on ~ .form-wrapper {
+    clear: left;
+}

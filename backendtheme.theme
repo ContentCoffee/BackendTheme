@@ -1,0 +1,57 @@
+<?php
+/**
+ * @file
+ * Functions to support theming in the Adminimal theme.
+ */
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function backendtheme_preprocess_html(&$variables) {
+    // Add adminimal class to the body, because the theme still contains
+    // the styling from adminimal_theme, which requires this body class.
+    $variables['attributes']['class'][] = 'adminimal';
+    // Add our own backendtheme class to the body.
+    $variables['attributes']['class'][] = 'backendtheme';
+}
+
+/**
+ * Implements hook_preprocess_page(&$variables)
+ */
+function backendtheme_preprocess_page(&$variables) {
+    $show_breadcrumbs = \Drupal::config('backendtheme.settings')->get('breadcrumbs.show');
+
+    $variables['show_breadcrumbs'] = $show_breadcrumbs;
+}
+
+function backendtheme_preprocess_page__node__add(&$variables) {
+    $variables['no_space'] = TRUE;
+}
+
+function backendtheme_preprocess_page__node__edit(&$variables) {
+    $variables['no_space'] = TRUE;
+}
+
+function backendtheme_element_info_alter(&$cache) {
+    $cache['textfield']['#pre_render'][] = 'backendtheme_maxlength_pre_render';
+    $cache['textarea']['#pre_render'][] = 'backendtheme_maxlength_pre_render';
+    $cache['text_format']['#pre_render'][] = 'backendtheme_maxlength_pre_render';
+}
+
+function backendtheme_maxlength_pre_render($element) {
+    $label = '@remaining / @limit';
+
+    if (isset($element['#maxlength_js']) && $element['#maxlength_js'] === TRUE) {
+        if (isset($element['#attributes']['maxlength']) && $element['#attributes']['maxlength'] > 0) {
+            $element['#attributes']['maxlength_js_label'] = $label;
+            $element['#attached']['library'][] = 'backendtheme/maxlength.behaviors';
+        }
+
+        if (isset($element['summary']['#attributes']['maxlength']) && $element['summary']['#attributes']['maxlength'] > 0) {
+            $element['summary']['#attributes']['maxlength_js_label'] = $label;
+            $element['summary']['#attached']['library'][] = 'backendtheme/maxlength.behaviors';
+        }
+    }
+
+    return $element;
+}
