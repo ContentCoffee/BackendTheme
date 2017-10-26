@@ -40,6 +40,10 @@
     &--contest::before {
         content: $ionicon-var-trophy;
     }
+    &--alert::before {
+        content: $ionicon-var-alert;
+        color: #e03131;
+    }
 
     /*
         CONTENT BLOCKS
